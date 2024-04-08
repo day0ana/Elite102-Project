@@ -1,4 +1,6 @@
 # imports
+#import mysql.connector
+## GUIS
 import tkinter as tk
 from tkinter import messagebox
 
