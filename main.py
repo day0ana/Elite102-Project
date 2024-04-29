@@ -19,7 +19,7 @@ cursor = connect.cursor()
 
 # Classes
 ## tkinterApp class
-class tkinterApp(tk.Tk):
+class tkinterApp(tk.Tk): ## Switching Pages code helped by GeeksforGeeks <3
     # constructor
     def __init__(self, *args, **kwargs):
         # initialization of tkinter app
@@ -77,9 +77,6 @@ class LoginPage(tk.Frame):
         # intiialization
         tk.Frame.__init__(self,parent)
         self.controller = controller 
-        
-        # label = ttk.Label(self,text="pg1")
-        # label.grid(row=0, column=4, padx=10, pady=10)
 
         # switch to welcomePage button
         welcomePageButtom = ttk.Button(self, text ="Welcome Page", command = lambda : controller.showFrame(WelcomePage))
@@ -119,9 +116,6 @@ class CreateAccountPage(tk.Frame):
         # inittialization
         tk.Frame.__init__(self,parent)
         self.controller = controller 
-
-        # label = ttk.Label(self,text="pg1")
-        # label.grid(row=0, column=4, padx=10, pady=10)
 
         # switch to loginPage button
         loginPageButton = ttk.Button(self, text ="Login", command = lambda : controller.showFrame(LoginPage))
@@ -180,10 +174,6 @@ class OptionsPage(tk.Frame):
     def __init__(self, parent, controller):
         # intialization
         tk.Frame.__init__(self,parent)
-        #self.username = username
-
-        # label = ttk.Label(self,text="pg1")
-        # label.grid(row=0, column=4, padx=10, pady=10)
 
         # switching to welcomePage button
         welcomePageButton = ttk.Button(self, text ="Welcome Page", command = lambda : controller.showFrame(WelcomePage))
