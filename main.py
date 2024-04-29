@@ -58,13 +58,13 @@ class WelcomePage(tk.Frame):
 
         # welcome label 
         welcomeLabel = ttk.Label(self, text="Welcome Page", font=("Arial",15))
-        welcomeLabel.grid(row=0, column=5, padx=10, pady=10)
+        welcomeLabel.grid(row=0, column=6, padx=10, pady=10)
         # button to switch to loginPage
         loginPageButton = ttk.Button(self, text ="Login", command = lambda : controller.showFrame(LoginPage))
-        loginPageButton.grid(row = 1, column = 1, padx = 10, pady = 10)
+        loginPageButton.grid(row = 1, column = 6, padx = 10, pady = 10)
         # button to switch to createAccountPage
         createPageButton = ttk.Button(self, text ="Create Account", command = lambda : controller.showFrame(CreateAccountPage))
-        createPageButton.grid(row = 2, column = 1, padx = 10, pady = 10)
+        createPageButton.grid(row = 2, column = 6, padx = 10, pady = 10)
 
 ## LoginPage
 class LoginPage(tk.Frame):
