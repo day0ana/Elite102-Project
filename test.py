@@ -3,6 +3,7 @@ import unittest
 ## accessing classes
 from main import tkinterApp, WelcomePage, LoginPage, CreateAccountPage, OptionsPage
 
+## TestBankAccountProgram class
 class TestBankAccountProgram(unittest.TestCase):
     # constructor
     def __init__(self):
@@ -66,5 +67,6 @@ class TestBankAccountProgram(unittest.TestCase):
         self.assertTrue(email) ###
         self.assertIsInstance(initialBalance, (int, float)) # checking it a num
 
+# runs program
 if __name__ == '__main__':
     unittest.main()

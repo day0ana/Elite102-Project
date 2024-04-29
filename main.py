@@ -57,14 +57,18 @@ class WelcomePage(tk.Frame):
         tk.Frame.__init__(self,parent)
 
         # welcome label 
-        welcomeLabel = ttk.Label(self, text="Welcome Page", font=("Arial",15))
-        welcomeLabel.grid(row=0, column=6, padx=10, pady=10)
+        welcomeLabel = ttk.Label(self, text="Welcome Page", font=("Courier New",25))
+        welcomeLabel.grid(row=0, column=1, padx=10, pady=10)
         # button to switch to loginPage
-        loginPageButton = ttk.Button(self, text ="Login", command = lambda : controller.showFrame(LoginPage))
-        loginPageButton.grid(row = 1, column = 6, padx = 10, pady = 10)
+        loginPageButton = ttk.Button(self, text="Login", command = lambda : controller.showFrame(LoginPage))
+        loginPageButton.grid(row = 1, column = 1, padx = 10, pady = 10)
         # button to switch to createAccountPage
-        createPageButton = ttk.Button(self, text ="Create Account", command = lambda : controller.showFrame(CreateAccountPage))
-        createPageButton.grid(row = 2, column = 6, padx = 10, pady = 10)
+        createPageButton = ttk.Button(self, text="Create Account", command=lambda : controller.showFrame(CreateAccountPage))
+        createPageButton.grid(row = 2, column = 1, padx = 10, pady = 10)
+
+        # centering buttons y label with weights
+        self.grid_columnconfigure(0, weight=1) 
+        self.grid_columnconfigure(2, weight=1)  
 
 ## LoginPage
 class LoginPage(tk.Frame):
@@ -86,12 +90,12 @@ class LoginPage(tk.Frame):
 
         ## Required info
         # username 
-        usernameLabel = ttk.Label(self, text="Username:")
+        usernameLabel = ttk.Label(self, text="Username:", font=("Courier New", 25))
         usernameLabel.grid(row=0, column=4, padx=10, pady=10)
         self.username_entry = ttk.Entry(self)
         self.username_entry.grid(row=1, column=4, padx=10, pady=10)
         # password 
-        passwordLabel = ttk.Label(self, text="Password:")
+        passwordLabel = ttk.Label(self, text="Password:", font=("Courier New", 25))
         passwordLabel.grid(row=2, column=4, padx=10, pady=10)
         self.password_entry = ttk.Entry(self, show="*")
         self.password_entry.grid(row=3, column=4, padx=10, pady=10)
@@ -128,19 +132,19 @@ class CreateAccountPage(tk.Frame):
 
         # Required info to create account
         # username 
-        usernameLabel = ttk.Label(self, text="Username:")
+        usernameLabel = ttk.Label(self, text="Username:", font=("Courier New", 25))
         usernameLabel.grid(row=0, column=4, padx=10, pady=10)
         self.username_entry = ttk.Entry(self)
         self.username_entry.grid(row=1, column=4, padx=10, pady=10)
         # password 
-        passwordLabel = ttk.Label(self, text="Password:")
+        passwordLabel = ttk.Label(self, text="Password:", font=("Courier New", 25))
         passwordLabel.grid(row=2, column=4, padx=10, pady=10)
         self.password_entry = ttk.Entry(self, show="*")
         self.password_entry.grid(row=3, column=4, padx=10, pady=10)
         # email 
-        emailLabel = ttk.Label(self, text="Email:")
+        emailLabel = ttk.Label(self, text="Email:", font=("Courier New", 25))
         emailLabel.grid(row=4, column=4, padx=10, pady=10)
-        self.email_entry = ttk.Entry(self, show="*")
+        self.email_entry = ttk.Entry(self)
         self.email_entry.grid(row=5, column=4, padx=10, pady=10)
         
         # create button
@@ -187,7 +191,7 @@ class OptionsPage(tk.Frame):
 
         ## Required info
         # username 
-        usernameLabel = ttk.Label(self, text="Username:")
+        usernameLabel = ttk.Label(self, text="Username:", font=("Courier New", 25))
         usernameLabel.grid(row=2, column=4, padx=10, pady=10)
         self.username_entry = ttk.Entry(self)
         self.username_entry.grid(row=3, column=4, padx=10, pady=10)
