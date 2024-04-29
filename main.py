@@ -216,9 +216,6 @@ class OptionsPage(tk.Frame):
         amount = simpledialog.askfloat("Withdrawing Amount", "Enter the amount to withdraw: ")
         username = self.username_entry.get()
         balance = cursor.fetchone()
-
-        # changes balance in database
-        #cursor.execute("SELECT balance FROM accounts WHERE username=%s",(username,))
         
         # if there is enough money from user's balance to be withdrawn 
         if balance >= amount:
